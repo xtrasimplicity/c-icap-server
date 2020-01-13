@@ -294,7 +294,7 @@ void init_extra_data(ci_service_xdata_t * srv_xdata, const char *service)
     char stat_group[1024];
     memset(srv_xdata, 0, sizeof(ci_service_xdata_t));
     ci_thread_rwlock_init(&srv_xdata->lock);
-    strncpy(srv_xdata->ISTag, "ISTag: " CI_ISTAG "-XXXXXXXXX", SRV_ISTAG_SIZE);
+    strncpy(srv_xdata->ISTag, "ISTag: \"" CI_ISTAG "-XXXXXXXXX\"", SRV_ISTAG_SIZE);
     srv_xdata->ISTag[SRV_ISTAG_SIZE] = '\0';
 
     memset(srv_xdata->xincludes, 0, XINCLUDES_SIZE + 1);
